@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title ToDoList 
+        link(rel="stylesheet", href="./style/main.css")
+    body 
+        div.container
+            div.img    
+                img(src="./images/todo.png")
+            div.todo     
+               h1 TO DO LIST 
+               div.row
+                   form(action="/add/" + id, method="POST")
+                        input(type="text",  name="description", id="input-boox" ,placeholder="add your text")
+                        button(type="submit") add
+
+                   ul#listContainer         
+                       each item in data
+                            - id = item.id
+                            li=item.description || "No description "
+                                form(action="/delet/" + id, method="POST")
+                                    button(type="submit") x
+    script(src="index.js") 

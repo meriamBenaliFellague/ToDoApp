@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&family=Bad+Script&display=swap');
+:root{
+    --button-colot:#F08080;
+    --font-width-reg:400 ;
+    --font-width-bold:700 ;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bad Script', cursive;
+}
+
+body{
+
+    background: linear-gradient(135deg,#003d26,#1f3e7a);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: auto;
+    width: 58%;
+    font-family: 'poppins' ,sans-serif;
+    border-radius: 20px;
+    margin-top: 3%;
+}
+
+.img{
+    grid-column: 1/2;
+    & >img{
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+    }
+}
+.todo{
+    grid-column: 2/3;
+    border-radius: 20px;
+    
+    & >h1{
+        color: #1a2d4d;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 59px 1fr;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    
+    & > form{
+grid-row: 1/2;
+       & > input{
+        
+        border: none;
+        outline: none;
+        background: linear-gradient(135deg,#b3fce0,#b3ccff);
+        padding: 10px;
+        padding-left: 20px;
+        font-weight:600;
+        font-size: 15px;
+        width: 70%;
+        border-radius: 20px;
+       }
+   
+       &> button{
+        border:none;
+        outline: none;
+        
+       background-color:  #1a2d4d;
+        font-weight: var(--font-width-bold);
+        padding: 14px 16px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 40px;
+        
+        
+      } 
+ }}
+
+ ul{
+    grid-row: 2/3;
+ }
+
+ ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 5px 8px 0px 10px;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    
+}
+ul li button{
+    position: absolute;
+    height: 10px;
+    width: 30px;
+    border-radius: 50%;
+    color:#1a2d4d;
+    background-color: #fff;
+    border: none;
+    right: 75px;
+    font-size: 18px;
+    font-family: 'Aleo';
+}
+ul li.cheked{
+    color: #555;
+    text-decoration: line-through;
+   
+}
+
+
