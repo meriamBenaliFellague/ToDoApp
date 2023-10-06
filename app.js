@@ -8,16 +8,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 // Routes
 
-const list =[
-   {
-      id:1,
-      description:'task1',
-  },
-   {
-      id:2, 
-      description:'task2',
-   }
-];
+const list =[];
 app.get('/',(req,res)=>{
    return res.render('home',{
       data: list,
