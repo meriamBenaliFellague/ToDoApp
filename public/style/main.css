@@ -126,4 +126,57 @@ ul li.cheked{
    
 }
 
-
+@media (max-width: 450px){
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 160px 1fr;
+        height: auto;
+        width: 80%;
+        margin-top: 3%;
+    }
+    .img{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        & >img{
+            width: 150px;
+            height: 150px;
+            padding-left: 20px;
+            padding-top: 20px;
+            border-radius: 0px;
+        }
+    }
+    .todo{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        border-radius: 20px;
+        
+        & >h1{
+            color: #1a2d4d;
+            margin-top: 15px;
+            margin-left: 90px;
+            font-size: 25px;
+        }
+        
+    }
+    .row form input{
+        padding: 7px;
+        padding-left: 20px;
+        font-weight:500;
+        font-size: 15px;
+        width: 68%;
+        margin-left: 27px;
+    }
+    .row form button{   
+        padding: 12px 14px;
+        font-size: 15px;
+   }
+   ul li{
+       list-style: none;
+       font-size: 17px;
+       padding: 5px 0px 0px 30px;
+     }
+     ul li button{
+        right: 34px;
+    }
+}
